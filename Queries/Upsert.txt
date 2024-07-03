@@ -1,0 +1,8 @@
+INSERT INTO dish (id, name, description, price, availability, category)
+VALUES (1, 'Dish Name', 'Description', 10.00, true, 'MAIN_COURSE')
+ON CONFLICT (id) DO UPDATE
+SET name = EXCLUDED.name,
+    description = EXCLUDED.description,
+    price = EXCLUDED.price,
+    availability = EXCLUDED.availability,
+    category = EXCLUDED.category;

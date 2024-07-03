@@ -1,0 +1,2 @@
+Частичный индекс для активных блюд:
+CREATE INDEX idx_dish_active ON dish (name) WHERE availability = true;

@@ -1,0 +1,8 @@
+Создание индекса для поиска клиентов по имени в таблице Person:
+CREATE INDEX idx_person_name ON person (name);
+
+Проверка индекса:
+SELECT indexname, indexdef
+FROM pg_indexes
+WHERE tablename = 'person';
+
